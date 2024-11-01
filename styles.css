@@ -1,0 +1,82 @@
+/*Font Styles*/
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-weight: normal;
+    src: url('assets/fonts/RobotoMono-Regular.woff2') format('woff2');
+    src: url('assets/fonts/RobotoMono-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    src: url('assets/fonts/RobotoMono-Bold.woff2') format('woff2');
+    src: url('assets/fonts/RobotoMono-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    src: url('assets/fonts/Poppins-Regular.woff2') format('woff2');
+    src: url('assets/fonts/Poppins-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: bold;
+    src: url('assets/fonts/Poppins-Bold.woff2') format('woff2');
+    src: url('assets/fonts/Poppins-Bold.woff') format('woff');
+}
+
+/*Variable Colors*/
+
+:root {
+    --teal-light: #16212C;
+    --teal-dark: #15212D;
+}
+
+/*General Styles*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    background: linear-gradient(to bottom right, var(--teal-light), var(--teal-dark));
+    color: #fff;
+    font-family: 'Roboto Mono';
+    height: 100vh;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*Navigation Bar*/
+
+.nav-bar {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.nav-bar-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    max-width: 90%;
+}
+
+.nav-bar-container ul {
+    display: flex;
+    gap: 2.5rem;
+}
