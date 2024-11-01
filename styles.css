@@ -31,9 +31,21 @@
 /*Variable Colors*/
 
 :root {
-    --teal-bg-dark: #15212D;
-    --teal-text: #3DCCBF;
+    --bg-base: #000;
+    --teal-bg-accent: #15212D;
+    --teal-text-accent: #3DCCBF;
     --grey-text: #A4B2AF;
+    --primary-text: #fff;
+}
+
+/*Change light mode colors later*/
+
+.light-mode {
+    --bg-base: #fff;
+    --teal-bg-accent: #3DCCBF;
+    --teal-text-accent: #15212D;
+    --grey-text: #3a3d3d;
+    --primary-text: #000;
 }
 
 /*General Styles*/
@@ -47,15 +59,15 @@
 body{
     font-size: 16px;
     line-height: 1.5;
-    background: linear-gradient(to bottom right, #000, #000, var(--teal-bg-dark));
+    background: linear-gradient(to bottom right, var(--bg-base), var(--bg-base), var(--teal-bg-accent));
     background-attachment: fixed;
-    color: #fff;
+    color: var(--primary-text);
     font-family: 'Roboto Mono';
     height: 100vh;
 }
 
 a {
-    color: #fff;
+    color: var(--primary-text);
     text-decoration: none;
 }
 
@@ -69,10 +81,6 @@ ul {
     font-size: 1.3rem;
 }
 
-.nav-bar-container span {
-    color: var(--teal-text);
-}
-
 .nav-bar {
     font-weight: bold;
     font-size: 1rem;
@@ -82,9 +90,13 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 0;
     margin: 0 auto;
-    padding-top: 2rem;
     max-width: 90%;
+}
+
+.nav-bar-container span {
+    color: var(--teal-text-accent);
 }
 
 .nav-bar-container ul {
@@ -98,11 +110,11 @@ ul {
 }
 
 .nav-bar-container a:hover {
-    color: #fff;
+    color: var(--primary-text);
 }
 
 .light-mode-toggle {
-    background-color: var(--teal-bg-dark);
+    background-color: var(--teal-bg-accent);
     padding: 0.5rem;
     border-radius: 5px;
     border: none;
