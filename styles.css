@@ -75,6 +75,10 @@ ul {
     list-style: none;
 }
 
+.hidden {
+    display: none;
+}
+
 /*Navigation Bar*/
 
 .logo {
@@ -92,7 +96,7 @@ ul {
     align-items: center;
     padding: 1rem 0;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 80%;
 }
 
 .nav-bar-container span {
@@ -115,7 +119,7 @@ ul {
 
 .light-mode-toggle {
     background-color: var(--teal-bg-accent);
-    padding: 0.5rem;
+    padding: 0.6rem 0.6rem 0.5rem 0.6rem;
     border-radius: 5px;
     border: none;
     cursor: pointer;
