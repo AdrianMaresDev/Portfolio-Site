@@ -31,8 +31,9 @@
 /*Variable Colors*/
 
 :root {
-    --teal-light: #16212C;
-    --teal-dark: #15212D;
+    --teal-bg-dark: #15212D;
+    --teal-text: #3DCCBF;
+    --grey-text: #A4B2AF;
 }
 
 /*General Styles*/
@@ -46,7 +47,8 @@
 body{
     font-size: 16px;
     line-height: 1.5;
-    background: linear-gradient(to bottom right, var(--teal-light), var(--teal-dark));
+    background: linear-gradient(to bottom right, #000, #000, var(--teal-bg-dark));
+    background-attachment: fixed;
     color: #fff;
     font-family: 'Roboto Mono';
     height: 100vh;
@@ -63,6 +65,14 @@ ul {
 
 /*Navigation Bar*/
 
+.logo {
+    font-size: 1.3rem;
+}
+
+.nav-bar-container span {
+    color: var(--teal-text);
+}
+
 .nav-bar {
     font-weight: bold;
     font-size: 1rem;
@@ -71,12 +81,30 @@ ul {
 .nav-bar-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     max-width: 90%;
 }
 
 .nav-bar-container ul {
     display: flex;
     gap: 2.5rem;
+}
+
+.nav-bar-container a {
+    color: var(--grey-text);
+    transition: color 0.3s ease;
+}
+
+.nav-bar-container a:hover {
+    color: #fff;
+}
+
+.light-mode-toggle {
+    background-color: var(--teal-bg-dark);
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
